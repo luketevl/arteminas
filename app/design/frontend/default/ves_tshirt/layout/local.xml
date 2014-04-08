@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+	<default>
+		<reference name="promotebottom">			
+				<block type="cms/block" name="bottom-0">
+					<action method="setBlockId"><block_id>bottom-0</block_id></action>
+				</block>
+				<block type="cms/block" name="cms_block_1">
+					<action method="setBlockId"><block_id>bottom-1</block_id></action>
+				</block>
+				<block type="cms/block" name="cms_block_2">
+					<action method="setBlockId"><block_id>bottom-2</block_id></action>
+				</block>
+				<block type="cms/block" name="cms_block_3">
+					<action method="setBlockId"><block_id>bottom-3</block_id></action>
+				</block>
+				
+		</reference>
+		<reference name="content">	
+		</reference>
+		
+		<remove name="left.newsletter"/>
+		<remove name="paypal.partner.right.logo" />	
+	</default>
+	<cms_index_index>
+	</cms_index_index>	
+</layout>	

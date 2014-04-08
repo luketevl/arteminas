@@ -1,0 +1,73 @@
+<?php 
+	$randid = rand();
+	$baseurl = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
+	$currentURL = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS);
+	$theme = isset($config['theme'])?$config["theme"]:"default";
+	$mainWidth = isset($config['mainWidth']) ? $config['mainWidth'] : 300;
+	$mainHeight = isset($config['mainHeight']) ? $config['mainHeight'] : 120;
+	$space = isset($config['itemSpace']) ? $config['itemSpace'] : 5;	
+	$moduleHeight = isset($config['moduleHeight']) ? $config['moduleHeight'] : 'auto';
+	$moduleWidth = isset($config['moduleWidth']) ? $config['moduleWidth'] : '300';
+	$styleHeight = $moduleHeight !='auto'?$moduleHeight."px":"auto";
+	$styleWidth = $moduleWidth !='auto'?$moduleWidth."px":"auto";
+	$themeColor = isset($config['themeColor']) ? $config['themeColor'] : 'black';	
+	$expandHovercards = isset($config['expandHovercards']) ? $config['expandHovercards'] : 0;	
+	$showSource = isset($config['showSource']) ? $config['showSource'] : 0;	
+	$useTwitterApi = isset($config['useTwitterApi']) ? $config['useTwitterApi'] : 1;	
+	$showGeoLocation = isset($config['mainHeight']) ? $config['showGeoLocation'] : 1;	
+	$showInReplyTo = isset($config['showInReplyTo']) ? $config['showInReplyTo'] : 1;
+	$showProfileImages = isset($config['showProfileImages']) ? $config['showProfileImages'] : 1;
+	$countItem = isset($config['countItem']) ? $config['countItem'] : 10;
+	$vertical = isset($config['vertical']) ? $config['vertical'] : 1;
+	$hoverPause = isset($config['hoverPause']) ? $config['hoverPause'] : 1;
+	$visible = isset($config['visible']) ? $config['visible'] : 3;
+	$auto = isset($config['auto']) ? $config['auto'] : "null";
+	$speed = isset($config['speed']) ? $config['speed'] : 1000;
+	$twitterAPI = isset($config['twitterApi'])? $config['twitterApi']: 'ZSO1guB57M6u0lm4cwqA';
+	$listUser = isset($config['username'])?$config['username']:"landofcoder";
+	$users = explode(",", $listUser);
+	$strUser = "";
+	if(!empty($users)){
+		$tmpArray = array();
+		foreach($users as $user){
+			$tmpArray[] = "__lofcode__".trim( $user )."__lofcode__";
+		}
+		$strUser = implode(",",$tmpArray);
+		$strUser = str_replace("__lofcode__","'",$strUser);
+	}
+?>
+<?php $randid = rand(); ?>
+<!-- Begin load asset files -->
+<?php echo Mage::helper('lof_twitter/media')->getAssets( $config, $this ); ?>
+<?php echo $useTwitterApi == 1?Mage::helper('lof_twitter/media')->loadJS( $config, "http://platform.twitter.com/anywhere.js?id=".$twitterAPI."&v=1", "twitter_anywhrere", true ): ""; ?>
+<?php echo Mage::helper('lof_twitter/media')->loadJS( $config, "jcarousellite", "jcarousellite" ); ?>
+<!-- End load asset files-->
+<div class="twitter-ticker <?php echo $themeColor;?>" style="width:<?php echo $styleWidth;?>;height:<?php echo $styleHeight;?>">    
+    <div class="lof-title"><?php if($config['title']){?><h2><?php echo $config['title']; ?></h2><?php } ?></div>
+    <div class="tweet-container" id="lof_twitter<?php echo $randid;?>">
+    </div>
+</div>
+<script type="text/javascript">
+			jQuery(document).ready( function(){
+				jQuery('#lof_twitter<?php echo $randid;?>').lofTwitter({
+					username:[<?php echo $strUser; ?>],
+					count: <?php echo $countItem; ?>,
+					itemWidth: <?php echo $mainWidth;?>,
+					itemHeight: <?php echo $mainHeight; ?>,
+					space: <?php echo $space?>,
+					vertical: <?php echo $vertical==1?'true':'false';?>,
+					hoverPause: <?php echo $hoverPause==1?'true':'false';?>,
+					visible: <?php echo $visible;?>,/*number visible items*/
+					auto:<?php echo $auto =='null' || $auto == '-1'?"'null'": (int)$auto;?>,
+					speed:<?php echo (int)$speed;?>,
+					showMode: "block",
+					showTweetFeed: {
+						expandHovercards: <?php echo $expandHovercards==1?'true':'false';?>,
+						showSource: <?php echo $showSource==1?'true':'false';?>,
+						showGeoLocation: <?php echo $showGeoLocation==1?'true':'false';?>,
+						showInReplyTo: <?php echo $showInReplyTo==1?'true':'false'; ?>,
+						showProfileImages: <?php echo $showProfileImages==1?'true':'false'; ?>
+					}
+				})
+			});
+</script>

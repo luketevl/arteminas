@@ -1,0 +1,153 @@
+<?xml version="1.0"?>  
+<config>  
+	<modules>  
+		<Lof_Twitter>  
+			<version>1.1.0</version>  
+		</Lof_Twitter>  
+	</modules>  
+	<frontend>
+		<translate>
+			<modules>
+				<Lof_Twitter>
+					<files>
+						<default>Lof_Twitter.csv</default>
+					</files>
+				</Lof_Twitter>
+			</modules>
+		</translate>
+		<layout>
+			<updates>
+				<twitter>
+					<file>twitter.xml</file>
+				</twitter>
+			</updates>
+		</layout>
+	</frontend>
+	<global>  		     
+		<blocks>
+            <lof_twitter>
+                <class>Lof_Twitter_Block</class>
+            </lof_twitter>
+        </blocks>
+        <models>
+            <lof_twitter>
+                <class>Lof_Twitter_Model</class>
+            </lof_twitter>
+        </models>
+        <helpers>
+            <lof_twitter>
+                <class>Lof_Twitter_Helper</class>
+            </lof_twitter>
+        </helpers>
+		<events>
+			<controller_action_layout_generate_blocks_after>
+				<observers>
+					<lof_twitter_observer>
+						<type>singleton</type>
+						<class>Lof_Twitter_Model_Observer</class>
+						<method>beforeRender</method>
+					</lof_twitter_observer>
+				</observers>
+			</controller_action_layout_generate_blocks_after>
+		</events>
+	</global>  
+	<admin>
+        <routers>
+            <twitter>
+                <use>admin</use>
+                <args>
+                    <module>Lof_Twitter</module>
+                    <frontName>Twitter</frontName>
+                </args>
+            </twitter>
+        </routers>
+    </admin>
+	<adminhtml>
+      <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <lof_twitter>
+                                            <title>Lof Twitter</title>
+                                        </lof_twitter>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <translate>
+			<modules>
+				<Lof_Twitter>
+					<files>
+						<default>Lof_Twitter.csv</default>
+					</files>
+				</Lof_Twitter>
+			</modules>
+		</translate>
+		
+		
+		<menu>
+			<landofcoder module="lof_twitter">
+                <title>LandOfCoder</title>
+                <sort_order>53</sort_order>
+				<children>
+					<lof_twitter module="lof_twitter">
+						<title>Lof Twitter</title>
+						<sort_order>59</sort_order>
+						<children>
+							
+							<configuration translate="title" module="lof_twitter">
+									<title>Configuration</title>
+									<sort_order>4</sort_order>
+									<action>adminhtml/system_config/edit/section/lof_twitter</action>
+							</configuration>
+									
+						</children>
+					</lof_twitter>
+				</children>
+			</landofcoder>	
+        </menu>
+		
+    </adminhtml>	
+		
+	<default>
+        <lof_twitter>
+            <lof_twitter>
+                <show>1</show>                
+                <title>Lof Twitter</title>  
+				<theme>default</theme>
+				<enable_css3>1</enable_css3>
+                <moduleHeight>320</moduleHeight>
+                <moduleWidth>380</moduleWidth>
+				<mainHeight>280</mainHeight>
+                <mainWidth>820</mainWidth>
+				<itemSpace>0</itemSpace>
+				<enable_jquery>0</enable_jquery>
+				<username>landofcoder,venustheme,leotheme</username>
+			</lof_twitter>
+        </lof_twitter>
+		<main_setting>
+			<useTwitterApi>1</useTwitterApi>
+			<twitterApi>ZSO1guB57M6u0lm4cwqA</twitterApi>
+			<themeColor>black</themeColor>
+			<expandHovercards>0</expandHovercards>
+			<showSource>0</showSource>
+			<showGeoLocation>1</showGeoLocation>
+			<showInReplyTo>0</showInReplyTo>
+			<showProfileImages>1</showProfileImages>
+			<countItem>10</countItem>
+			<vertical>1</vertical>
+			<hoverPause>1</hoverPause>
+			<visible>1</visible>
+			<auto>8000</auto>
+			<speed>500</speed>
+		</main_setting>
+    </default>
+</config>  

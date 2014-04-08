@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<!--
+        <reference name="head">	
+        	 <action method="addCss"><stylesheet>lof/slider/css/slider.css</stylesheet></action>
+        	<action method="addJs"><script>lof_slider/jquery.js</script></action>
+			<action method="addJs"><script>lof_slider/asset.js</script></action>
+            <action method="addJs"><script>lof_slider/jquery.easing.js</script></action>            
+            <action method="addJs"><script>lof_slider/script.js</script></action>
+			
+        </reference>
+		-->
+    </default>
+	<cms_index_index>
+		<reference name="slider">
+			<block type="lof_slider/catalog" name="lof.slider" before="-" />	
+		</reference>	
+	</cms_index_index>			
+</layout>

@@ -1,0 +1,86 @@
+/********************************Theme skin**********************************/
+.nav-top,
+.wrap-menu,.sidebar .category-products
+{border-top:3px solid #db6136;}
+
+/*------------------------------*/
+.fieldset .legend,
+.opc .active .step-title .number
+{border: 1px solid #db6136;}
+
+/*------------------------------*/
+.block-cart .block-title strong{border-bottom:1px solid #db6136;}
+
+/*------------------------------*/
+.bg-wrap-option-bottom
+{border-bottom:3px solid #db6136;}
+/*------------------------------*/
+h2,h3,h4,
+.fieldset .legend,
+a:hover,
+.notice,
+.nav-top ul li a,
+.sidebar .block .block-title strong,
+#nav-right li a:hover,
+.block-account .block-content li a:hover,
+.block-account .block-content li.current,
+.block-cart .block-title strong span,
+.view-detail,
+.products-grid .product-name,
+.products-grid .product-name a ,
+.product-shop .special-price .price,
+.product-shop .regular-price .price,
+.product-shop .price-box-bundle .price,
+.price-as-configured .price-label,
+.price-as-configured .full-product-price .price,
+.tier-prices-grouped li ,
+.add-to-cart button.btn-cart span span,
+.product-options-bottom .tier-prices li,
+.product-options-bottom .tier-prices .price,
+.product-options-bottom .tier-prices .benefit,
+.opc .active .step-title,
+.multiple-checkout .place-order .grand-total .price,
+.footer a,
+div.lof-main-wapper .lof-price,
+ul.tabs li.active a, ul.tabs li.active a:hover,
+.product-shop .price-from .price-label,.product-shop .price-to .price-label,.product-shop .special-price .price-label,.product-shop .minimal-price .price-label,
+.wrap-spbottom .f-links a,
+.twitter-ticker .jta-tweet-body .jta-tweet-user-screen-name-link,
+.product-name a ,
+.cms-index-index .subtitle
+{color: #db6136;cursor:pointer;}
+.wrap-spbottom .f-links a:hover{color:#000;}
+/*------------------------------*/
+button.button span span,
+.pager .pages .current,.pager .pages li:hover,
+.btn-checkout span span,
+.block-account .block-title,
+#products-list .item button.btn-cart span span,
+.block-currency .block-content ul li.selected,
+.opc .active .step-title .number
+{background:#db6136;}
+
+/*------------------------------*/
+#ves-header span.logo{background:url(../images/coral/logo.png) top center no-repeat;}
+.block-cart .block-title strong { background:url(../images/default/shopping-cart.png) left -268px no-repeat;}
+#nav-right li.level0 a{background:url(../images/default/bg-li-a.png) center left no-repeat;}
+.coppyright-content .backtotop:hover{background-position:center -69px;}
+.products-grid .actions {background:url(../images/default/cart-detail.png) right -175px no-repeat;}
+.footer .f-links a{background:url(../images/default/list-footer-links.jpg) left 9px no-repeat}
+.add-to-cart button.btn-cart span{background:url(../images/default/cart-detail.png) left -175px no-repeat;}
+.wrap-spbottom .f-links a {background: url("../images/default/list-footer-links.jpg") no-repeat scroll left 9px transparent;}
+.lof-slider .lof-item a.slide-addtocart{background:url(../images/coral/slide-add-to-cart.png) top left no-repeat;}
+
+
+.social-netword .social li.facebook a:hover{background-position:left -254px}
+.social-netword .social li.twitter a:hover{background-position:39px -254px}
+.social-netword .social li.social a:hover{background-position:-123px -254px}
+.social-netword .social li.youtube a:hover{background-position:right -254px}
+
+.twitter-ticker .jta-tweet-body{background:url(../images/default/icon-twitter_05.png) top left no-repeat;}
+#nav-right li.level0 a{background:url(../images/default/icon-li.png) left -185px no-repeat;}
+.wrap-spbottom .f-links a {background: url(../images/default/bullet-li.png) no-repeat left -188px transparent;}
+.coppyright-content .backtotop:hover{background-position:center -339px}
+
+#nav ul,#nav div {background:url(../images/default/bg-submenu-content-dot.png) top left repeat #e48766 !important;}
+.nav-top #nav > li.parent:hover > a{background:url(../images/default/bg-submenu-e48766.png) bottom center no-repeat;}
