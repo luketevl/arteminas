@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<config>
+    <twitter>
+        <lof translate="label" module="lof_twitter">
+            <label>Land Of Coder</label>
+            <sort_order>210</sort_order>
+        </lof>
+    </twitter>
+	<sections>
+        <lof_twitter>
+            <label>Lof Twitter</label>
+            <tab>lof</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+			
+            	<lof_twitter translate="label">
+					
+                    <label>General Setting</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>     
+							<last_update translate="label">
+							<label>Current Update Time</label>
+							<frontend_type>label</frontend_type>
+							<frontend_model>lof_twitter/system_config_form_field_notification</frontend_model>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</last_update> 
+                    	<show translate="label" module="core">
+							<label>Enabled</label>
+							<sort_order>10</sort_order>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</show>	
+						
+						<title translate="label">
+                            <label>Module Title </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>15</sort_order>
+                            <comment>Empty for hide</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title> 
+						<theme translate="label">
+                            <label>Select Template</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lof_twitter/system_config_source_listTheme</source_model>
+                            <sort_order>20</sort_order>
+							<comment>Choose Template for your Slider</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </theme>
+						<moduleHeight translate="label">
+                            <label>Module Height</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </moduleHeight>
+						<moduleWidth translate="label">
+                            <label>Module Width</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </moduleWidth>
+						<mainHeight translate="label">
+                            <label>Main Item Height</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>32</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </mainHeight>
+						<mainWidth translate="label">
+                            <label>Main Item Width</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>33</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </mainWidth>
+						<itemSpace translate="label">
+                            <label>Item Space</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>36</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </itemSpace>
+						<spacer_menuasignment translate="label">
+							<label>Set Module Visable On Pages, Position</label>
+							<frontend_type>label</frontend_type>
+							<frontend_model>lof_twitter/system_config_form_field_spacer</frontend_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</spacer_menuasignment> 
+						<enable_jquery translate="label" module="core">
+							<label>Enabled Jquery Libs</label>
+							<comment>If you site load more than 2 query libs, recommend you uses this option to disable loading query libs.</comment>
+							<sort_order>40</sort_order>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enable_jquery>	
+						
+						<username translate="label">
+                            <label>Twitter Usernames</label>
+                            <frontend_type>textarea</frontend_type>
+							<comment>The users name whos tweet feed or list feed is displayed. This param is also used when a Twitter "Follow Button" is displayed. To use multil username please input as: username1,username2,...</comment>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </username>
+					</fields>
+				</lof_twitter>
+				<main_setting>
+					<label>Main Setting</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<useTwitterApi translate="label" module="core">
+							<label>Use Twitter Api</label>
+							<comment>When you enable, the anywhere js will load with your twitter api key.</comment>
+							<sort_order>30</sort_order>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</useTwitterApi>
+						<twitterApi translate="label">
+                            <label>Twitter Api key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>35</sort_order>
+							<comment>Go to twitter page to register a Api key then input here, for example: ZSO1guB57M6u0lm4cwqA ...</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </twitterApi>
+						<themeColor translate="label">
+                            <label>Theme Color</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lof_twitter/system_config_source_ListThemeColor</source_model>
+                            <sort_order>40</sort_order>
+							<comment>Choose color for a theme...</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </themeColor>
+						<expandHovercards translate="label" module="core">
+                            <label>Expand Hover Cards</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+							<comment>Show Hovercards in expanded mode.</comment>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </expandHovercards>
+						<showSource translate="label" module="core">
+                            <label>Show Source</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+							<comment>Show info about the source of the tweet.</comment>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </showSource>
+						<showGeoLocation translate="label" module="core">
+                            <label>Show Geo Location</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+							<comment>Show geolocation info and link to Google maps.</comment>
+                            <sort_order>55</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </showGeoLocation>
+						<showInReplyTo translate="label" module="core">
+                            <label>Show In Reply To</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+							<comment>Show link to the "replied to" tweet (if available).</comment>
+                            <sort_order>55</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </showInReplyTo>
+						<showProfileImages translate="label" module="core">
+                            <label>Show Profile Images</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+							<comment>A flag (true/false) that specifies whether to display a profile image in tweets.</comment>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </showProfileImages>
+						<countItem translate="label">
+                            <label>Count Item</label>
+                            <frontend_type>text</frontend_type>
+							<comment>The number of tweets shown in the tweet feed. If this param is 0, no feed is displayed</comment>
+                            <sort_order>65</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </countItem>
+						<spacer_slidesetting translate="label">
+							<label>Setting for slider - only use for Default theme</label>
+							<frontend_type>label</frontend_type>
+							<frontend_model>lof_twitter/system_config_form_field_spacer</frontend_model>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</spacer_slidesetting>
+						<vertical translate="label" module="core">
+                            <label>Vertical Slide</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+							<comment>Is Vertical slide.</comment>
+                            <sort_order>75</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </vertical>
+						<hoverPause translate="label" module="core">
+                            <label>Hover Pause</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+							<comment>Slide pause when mouseover.</comment>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </hoverPause>
+						<visible translate="label">
+                            <label>Number item show</label>
+                            <frontend_type>text</frontend_type>
+							<comment>The number of items that should scroll/slide when you click the next/prev navigation buttons.</comment>
+                            <sort_order>85</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </visible>
+						<auto translate="label">
+                            <label>Auto Scroll time</label>
+                            <frontend_type>text</frontend_type>
+							<comment>You can make your carousel auto-navigate itself by specfying a millisecond value in this option.The value you specify is the amount of time between 2 slides. The default is null, and that disables auto scrolling.</comment>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </auto>
+						<speed translate="label">
+                            <label>Speed</label>
+                            <frontend_type>text</frontend_type>
+							<comment>Specifying a speed will slow-down or speed-up the sliding speed of your carousel. Try it out with different speeds like 800, 600, 1500 etc. Providing 0, will remove the slide effect.</comment>
+                            <sort_order>95</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </speed>
+					</fields>
+				</main_setting>
+         		<advanded_parameter>
+					<label>Advanded Setting</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>6001</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<spacer_information translate="label">
+							<label>Information - Support</label>
+							<frontend_type>label</frontend_type>
+							<frontend_model>lof_twitter/system_config_form_field_spacer</frontend_model>
+							<sort_order>33</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</spacer_information> 
+						<module_information translate="label">
+							<label>Set Module Visable On Pages, Position</label>
+							<frontend_type>label</frontend_type>
+							<frontend_model>lof_twitter/system_config_form_field_information</frontend_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</module_information>                        
+					</fields>
+				</advanded_parameter>	
+            </groups>
+        </lof_twitter>
+    </sections>    
+</config>

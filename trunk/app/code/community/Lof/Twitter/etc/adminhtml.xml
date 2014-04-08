@@ -1,0 +1,31 @@
+<?xml version="1.0"?> 
+<config>
+		<acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <lof_twitter>
+                                            <title>Lof Twitter</title>
+                                        </lof_twitter>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <translate>
+			<modules>
+				<Lof_Twitter>
+					<files>
+						<default>Lof_Twitter.csv</default>
+					</files>
+				</Lof_Twitter>
+			</modules>
+		</translate>
+</config>

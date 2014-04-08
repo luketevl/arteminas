@@ -1,0 +1,42 @@
+/* ======================================================================================= */
+
+@font-face {
+    font-family: 'Arvo-Bold';
+    src: url('../fonts/Arvo-Bold.eot');
+    src: url('../fonts/Arvo-Bold.woff') format('woff'), url('../fonts/Arvo-Bold.ttf') format('truetype'), url('../fonts/Arvo-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Arvo';
+	src: url('../fonts/Arvo.eot');
+	src: local('?'), url('../fonts/Arvo.ttf') format('truetype'), url('../fonts/Arvo.woff') format('woff'),  url('../fonts/Arvo.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* ======================================================================================= */
+body,
+button.btn-checkout span span ,
+.sitebar-mycart,
+button.button span span,
+#ves-header .links a,
+.block-subscribe input.input-text,
+.twitter-ticker .lof-title h2,
+.twitter-ticker .jta-tweet-body{
+	font-family:Arvo;
+
+}
+
+
+.block-currency .block-content ul li a,
+#ves-header .form-search button.button span ,
+.product-view .product-shop .product-name h1,
+.cart .discount h2,
+.cart .shipping h2,
+.opc .step-title .number,
+.opc .step-title h2,
+.remember-me-popup .remember-me-popup-body a 
+{
+	font-family:arial
+}
